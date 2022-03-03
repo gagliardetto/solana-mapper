@@ -83,12 +83,15 @@ func newViewCommand() cli.Command {
 					continue
 				}
 				Sfln(
-					"#%v:: %s %s (%s) -> %s (%s) (%v hops, %v success, %v named)",
+					"#%v:: %s %s (%s) -> %s %s %s %s (%s) (%v hops, %v success, %v named)",
 					index,
 					CustomConstantLength(15, node.ASN.IP.String()),
-					Lime(CustomConstantLength(20, node.ASN.Name.String())),
+					Lime(CustomConstantLength(25, node.ASN.Name.String())),
 					node.ASN.Country,
-					CustomConstantLength(40, durafmt.Parse(node.Ping.AvgRtt).String()),
+					CustomConstantLength(20, Sf("avg(%s)", durafmt.Parse(node.Ping.AvgRtt).Format(units))),
+					CustomConstantLength(20, Sf("min(%s)", durafmt.Parse(node.Ping.MinRtt).Format(units))),
+					CustomConstantLength(20, Sf("max(%s)", durafmt.Parse(node.Ping.MaxRtt).Format(units))),
+					CustomConstantLength(20, Sf("stddev(%s)", durafmt.Parse(node.Ping.StdDevRtt).Format(units))),
 					formatLoss(node.Ping.PacketLoss),
 					len(node.Traceroute),
 					countHopsSuccess(node.Traceroute),
@@ -107,3 +110,7 @@ func formatLoss(loss float64) string {
 	}
 	return Sf(Orange("%v%% loss"), loss)
 }
+
+var (
+	units, _ = durafmt.DefaultUnitsCoder.Decode("y:y,w:w,d:d,h:h,m:m,s:s,ms:ms,µs:µs")
+)
