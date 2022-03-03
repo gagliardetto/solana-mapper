@@ -12,3 +12,9 @@ mkdir data 				# the dir where the results file will be saved
 
 NOTE: it will take a while to complete
 ---
+
+## view top results
+
+```bash
+./mapper.bin view /path/to/result.json
+```
