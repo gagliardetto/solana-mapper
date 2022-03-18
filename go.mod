@@ -5,7 +5,7 @@ go 1.17
 require (
 	github.com/ammario/ipisp v1.0.0
 	github.com/davecgh/go-spew v1.1.1
-	github.com/gagliardetto/solana-go v1.3.0
+	github.com/gagliardetto/solana-go v1.4.0
 	github.com/gagliardetto/streamject v0.2.0
 	github.com/gagliardetto/utilz v0.1.3
 	github.com/go-ping/ping v0.0.0-20211130115550-779d1e919534
@@ -30,7 +30,7 @@ require (
 	github.com/gagliardetto/treeout v0.1.4 // indirect
 	github.com/golang/groupcache v0.0.0-20200121045136-8c9f03a8e57e // indirect
 	github.com/google/uuid v1.2.0 // indirect
-	github.com/json-iterator/go v1.1.11 // indirect
+	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/klauspost/compress v1.13.6 // indirect
 	github.com/kr/pretty v0.2.1 // indirect
 	github.com/kr/text v0.1.0 // indirect
@@ -40,7 +40,7 @@ require (
 	github.com/miekg/dns v1.1.35 // indirect
 	github.com/mitchellh/go-testing-interface v1.14.1 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
-	github.com/modern-go/reflect2 v1.0.1 // indirect
+	github.com/modern-go/reflect2 v1.0.2 // indirect
 	github.com/mostynb/zstdpool-freelist v0.0.0-20201229113212-927304c0c3b1 // indirect
 	github.com/mr-tron/base58 v1.2.0 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
